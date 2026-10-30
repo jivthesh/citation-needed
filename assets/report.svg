@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" role="img" aria-label="citation-needed audit report on the demo storefront app, showing fabricated values and a failed charge reported as paid">
+  <rect width="860" height="430" rx="12" fill="#14161a"/>
+  <circle cx="26" cy="24" r="6" fill="#ff5f57"/>
+  <circle cx="46" cy="24" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="24" r="6" fill="#28c840"/>
+  <text x="430" y="29" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8b929c">citation-needed audit: demo storefront app</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+    <text x="26" y="72"><tspan fill="#ffb454">[citation needed]</tspan><tspan fill="#e6e8eb"> src/lib/checkout.ts:4-5  </tspan><tspan fill="#ff6b6b" font-weight="700">FABRICATED</tspan></text>
+    <text x="26" y="96" fill="#aeb4bd">  A failed charge is swallowed, then the function returns paid.</text>
+    <text x="26" y="118" fill="#aeb4bd">  A declined card reports as paid.</text>
+
+    <text x="26" y="156"><tspan fill="#ffb454">[citation needed]</tspan><tspan fill="#e6e8eb"> src/components/ProductCard.tsx:4-5  </tspan><tspan fill="#ff6b6b" font-weight="700">FABRICATED</tspan></text>
+    <text x="26" y="180" fill="#aeb4bd">  A product with no rating shows 4.8 stars and 128 reviews.</text>
+
+    <text x="26" y="218"><tspan fill="#ffb454">[citation needed]</tspan><tspan fill="#e6e8eb"> src/pages/Home.tsx:1-4  </tspan><tspan fill="#ff6b6b" font-weight="700">FABRICATED</tspan></text>
+    <text x="26" y="242" fill="#aeb4bd">  Hardcoded testimonials. The scanner did not flag it. The agent did.</text>
+
+    <text x="26" y="280"><tspan fill="#ffb454">[citation needed]</tspan><tspan fill="#e6e8eb"> src/pages/Returns.tsx  </tspan><tspan fill="#c792ea" font-weight="700">DEAD</tspan></text>
+    <text x="26" y="304" fill="#aeb4bd">  Nothing imports this page, and the form has no submit handler.</text>
+
+    <line x1="26" y1="336" x2="834" y2="336" stroke="#2c3036"/>
+    <text x="26" y="366" fill="#e6e8eb">FABRICATED 6   UNSOURCED 2   DEAD 2   UNPROVEN 1</text>
+    <text x="26" y="392" fill="#8b929c">7 scanner suspects traced. 0 sourced. 0 left untraced.</text>
+  </g>
+</svg>

@@ -6,15 +6,9 @@ Coding agents don't only write bugs. They fill gaps with things that look real: 
 
 `citation-needed` treats every value a user can see, and every claim of "done", as a Wikipedia edit: no source, no entry.
 
-```tsx
-const rating = product.rating ?? 4.8;
-```
+![An audit report marking a failed charge reported as paid, a made-up 4.8 star rating, hardcoded testimonials, and an unreachable page](assets/report.svg)
 
-```
-[citation needed] src/ProductCard.tsx:4  FABRICATED
-  `product.rating ?? 4.8` shows 4.8 stars on any product without reviews.
-  Fix: hide the rating when it is missing.
-```
+Shortened from a real run on the [demo storefront app](benchmark/fixtures/storefront), which has fakes planted on purpose.
 
 ## Install
 
