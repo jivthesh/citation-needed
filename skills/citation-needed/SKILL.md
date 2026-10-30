@@ -10,11 +10,15 @@ Treat every value a user can see, and every claim that work is done, as a Wikipe
 ## Audit
 
 1. Set the scope: the path the user named, otherwise the current diff, otherwise the repo.
-2. Run the scanner from this skill's directory:
+2. Run the scanner as a single command, using the full path to this skill's directory. Do not `cd` first or chain commands, because that can trigger a permission block.
 
    ```bash
-   node scripts/scan.mjs <path>
+   node "${CLAUDE_SKILL_DIR}/scripts/scan.mjs" <path>
    ```
+
+   If `${CLAUDE_SKILL_DIR}` was not filled in, replace it with this skill's directory.
+
+   If the scanner still cannot run, tell the user and try the exact command again before reading any code. If it stays blocked, say the audit is partial.
 
    It prints suspects, not verdicts. Regex cannot see meaning, so never stop at its output.
 

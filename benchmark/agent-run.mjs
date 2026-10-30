@@ -120,6 +120,17 @@ function runOnce({ arm, name, run, source, seeds }) {
         event.type === 'assistant' ? event.message.content.filter((c) => c.type === 'tool_use') : []
       );
       const findings = parseFindings(result?.result ?? '');
+      const scannerIds = new Set(
+        uses.filter((u) => u.name === 'Bash' && String(u.input.command).includes('scan.mjs')).map((u) => u.id)
+      );
+      // A blocked command still appears as a tool call, so count only a successful result.
+      const scannerRan = events.some((event) =>
+        event.type === 'user' && Array.isArray(event.message?.content) &&
+        event.message.content.some((c) =>
+          c.type === 'tool_result' && scannerIds.has(c.tool_use_id) && !c.is_error &&
+          /suspects\. Trace|Output too large/.test(JSON.stringify(c.content))
+        )
+      );
       const row = {
         id, arm, name, run, exit: code,
         status: result?.subtype ?? 'no_result',
@@ -128,7 +139,7 @@ function runOnce({ arm, name, run, source, seeds }) {
         turns: result?.num_turns ?? null,
         // A skill-arm run that never loaded the skill must not count as a skill result.
         used_skill: uses.some((u) => u.name === 'Skill' && JSON.stringify(u.input).includes('citation-needed')),
-        ran_scanner: uses.some((u) => u.name === 'Bash' && String(u.input.command).includes('scan.mjs')),
+        ran_scanner: scannerRan,
         parsed: findings !== null,
         ...(findings ? score(source, seeds, findings) : {}),
       };

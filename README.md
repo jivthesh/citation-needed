@@ -66,26 +66,26 @@ It covers JS, TS, Vue, Svelte, and Python. It skips tests, dot-folders, and buil
 
 Each test ran Claude Sonnet headless with the same prompt, with and without this plugin, and with no other plugins or hooks loaded. Raw totals are in [`benchmark/results`](benchmark/results).
 
-**Short version:** on small apps it adds almost nothing. On one large real app it found about three times as many known bugs, but results swung widely between runs.
+**Short version:** on small apps it adds little, because a plain agent already finds most fakes. On one large real app it caught 37 known bugs where a plain agent caught 5, though the answer key favours the skill.
 
-### Large private app (1 app, 5 runs per arm)
+### Large private app (1 app, 8 runs per arm)
 
-About 1,400 TypeScript files and 364,000 lines. The answer key is 9 confirmed bug groups. Code and bug details stay private.
+About 1,400 TypeScript files and 364,000 lines. The answer key is 9 confirmed bug groups, so 8 runs give 72 chances. Code and bug details stay private.
 
 | | Plain agent | With citation-needed |
 | ----------------------- | ------------ | -------------------- |
-| Known bugs caught | 5 of 45 | 17 of 45 |
-| Caught per run, out of 9 | 1, 1, 1, 2, 0 | 5, 0, 4, 1, 7 |
-| Total findings | 98 | 127 |
-| Total cost | $1.27 | $1.04 |
+| Known bugs caught | 5 of 72 | 37 of 72 |
+| Caught per run, out of 9 | 0, 0, 1, 0, 1, 0, 2, 1 | 4, 1, 7, 5, 2, 5, 6, 7 |
+| Total findings | 147 | 231 |
+| Total cost | $2.06 | $1.46 |
 
 ### Small synthetic apps (3 apps, 9 runs per arm)
 
 | | Plain agent | With citation-needed |
 | ------------------------- | ------------ | -------------------- |
-| Planted fakes caught | 66 of 69 | 65 of 69 |
-| Clean decoys wrongly flagged | 9 of 27 | 5 of 27 |
-| Total cost | $0.54 | $0.66 |
+| Planted fakes caught | 63 of 69 | 66 of 69 |
+| Clean decoys wrongly flagged | 6 of 27 | 4 of 27 |
+| Total cost | $0.48 | $0.66 |
 
 ### Prevention (3 tempting build tasks, 9 runs per arm)
 
@@ -106,9 +106,11 @@ About 1,400 TypeScript files and 364,000 lines. The answer key is 9 confirmed bu
 ### Read this with care
 
 - **The large-app answer key is biased.** Its bugs were found using this scanner plus manual tracing, which favours the skill. The app, its answer key, and the skill have one author.
-- **One app and five runs is a small sample.** One skill run caught nothing. Don't read 17 vs 5 as a precise ratio.
-- **The skill was changed once after testing.** The first two large-app runs caught 0 and 8 of 9, so the skill now says to trace every `high` suspect. Those two runs and an earlier demo round are not in these tables.
-- **The scorer was changed once after testing.** One run reported paths relative to `src/`, so the scorer now accepts those paths for both arms. Saved findings were rescored, and no run was repeated.
+- **One app is a small sample.** Skill runs ranged from 1 to 7 of 9, so don't read 37 vs 5 as a precise ratio.
+- **Only known bugs are scored.** The extra findings on the large app were not reviewed, so some may be false alarms.
+- **The skill was changed twice after testing.** It now says to trace every `high` suspect, and to run the scanner as one command, because `cd` plus `node` was blocked in some runs. Earlier rounds, including ones that caught 0 of 9, are not in these tables.
+- **The scorer was changed after testing.** It now accepts paths relative to `src/`, for both arms. Saved findings were rescored, and no run was repeated for this.
+- **Long scanner output is a known limit.** On the large app the output was 36.7 KB, so the agent got a short preview and a saved file. Some runs may not have read all of it.
 - **The synthetic apps are not independent.** The same person wrote the fixtures and the rules. The scanner table reflects rules tuned against those fixtures.
 - **Prevention is weak evidence.** The plain model rarely invented data here, and the scanner only sees part of what could be fake. Most suspects came from one task about a backend that wasn't ready.
 - **The scanner is noisy on real code.** It lists suspects, many of them legitimate defaults, which is why the agent has to trace them.
