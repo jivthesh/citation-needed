@@ -1,0 +1,51 @@
+{
+  "model": "sonnet",
+  "baseline": {
+    "runs": 9,
+    "used_skill": 0,
+    "ran_scanner": 0,
+    "fake_seeds": 69,
+    "fake_caught": 66,
+    "semantic_seeds": 12,
+    "semantic_caught": 12,
+    "clean_decoys": 27,
+    "false_alarms": 9,
+    "findings": 97,
+    "cost_usd": 0.54,
+    "per_run_caught": [
+      9,
+      5,
+      9,
+      9,
+      5,
+      8,
+      8,
+      5,
+      8
+    ]
+  },
+  "skill": {
+    "runs": 9,
+    "used_skill": 9,
+    "ran_scanner": 9,
+    "fake_seeds": 69,
+    "fake_caught": 65,
+    "semantic_seeds": 12,
+    "semantic_caught": 12,
+    "clean_decoys": 27,
+    "false_alarms": 5,
+    "findings": 94,
+    "cost_usd": 0.66,
+    "per_run_caught": [
+      8,
+      5,
+      8,
+      8,
+      5,
+      9,
+      8,
+      5,
+      9
+    ]
+  }
+}

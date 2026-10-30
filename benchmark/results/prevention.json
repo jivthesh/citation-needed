@@ -1,0 +1,69 @@
+{
+  "model": "sonnet",
+  "summary": {
+    "baseline/complete-card": {
+      "runs": 3,
+      "hook_fired": 0,
+      "runs_with_suspects": 1,
+      "suspects": 1,
+      "flagged_in_reply": 0,
+      "cost_usd": 0.18
+    },
+    "baseline/unready-backend": {
+      "runs": 3,
+      "hook_fired": 0,
+      "runs_with_suspects": 3,
+      "suspects": 6,
+      "flagged_in_reply": 0,
+      "cost_usd": 0.19
+    },
+    "baseline/landing-stats": {
+      "runs": 3,
+      "hook_fired": 0,
+      "runs_with_suspects": 0,
+      "suspects": 0,
+      "flagged_in_reply": 0,
+      "cost_usd": 0.2
+    },
+    "baseline/all": {
+      "runs": 9,
+      "hook_fired": 0,
+      "runs_with_suspects": 4,
+      "suspects": 7,
+      "flagged_in_reply": 0,
+      "cost_usd": 0.57
+    },
+    "hook/complete-card": {
+      "runs": 3,
+      "hook_fired": 3,
+      "runs_with_suspects": 0,
+      "suspects": 0,
+      "flagged_in_reply": 3,
+      "cost_usd": 0.19
+    },
+    "hook/unready-backend": {
+      "runs": 3,
+      "hook_fired": 3,
+      "runs_with_suspects": 2,
+      "suspects": 2,
+      "flagged_in_reply": 3,
+      "cost_usd": 0.21
+    },
+    "hook/landing-stats": {
+      "runs": 3,
+      "hook_fired": 3,
+      "runs_with_suspects": 0,
+      "suspects": 0,
+      "flagged_in_reply": 3,
+      "cost_usd": 0.22
+    },
+    "hook/all": {
+      "runs": 9,
+      "hook_fired": 9,
+      "runs_with_suspects": 2,
+      "suspects": 2,
+      "flagged_in_reply": 9,
+      "cost_usd": 0.61
+    }
+  }
+}

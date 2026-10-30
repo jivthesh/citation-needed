@@ -1,0 +1,45 @@
+{
+  "target": "one private TypeScript app, about 1,400 files and 364,000 lines",
+  "answer_key": "9 confirmed bug groups",
+  "model": "sonnet",
+  "baseline": {
+    "runs": 5,
+    "used_skill": 0,
+    "ran_scanner": 0,
+    "fake_seeds": 45,
+    "fake_caught": 5,
+    "semantic_seeds": 45,
+    "semantic_caught": 5,
+    "clean_decoys": 0,
+    "false_alarms": 0,
+    "findings": 98,
+    "cost_usd": 1.27,
+    "per_run_caught": [
+      1,
+      1,
+      1,
+      2,
+      0
+    ]
+  },
+  "skill": {
+    "runs": 5,
+    "used_skill": 5,
+    "ran_scanner": 5,
+    "fake_seeds": 45,
+    "fake_caught": 17,
+    "semantic_seeds": 45,
+    "semantic_caught": 17,
+    "clean_decoys": 0,
+    "false_alarms": 0,
+    "findings": 127,
+    "cost_usd": 1.04,
+    "per_run_caught": [
+      5,
+      0,
+      4,
+      1,
+      7
+    ]
+  }
+}

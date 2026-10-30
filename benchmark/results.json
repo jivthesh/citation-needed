@@ -1,0 +1,38 @@
+{
+  "storefront": {
+    "pattern_seeds": 7,
+    "pattern_caught": 7,
+    "semantic_seeds": 2,
+    "semantic_caught": 0,
+    "clean_decoys": 3,
+    "false_alarms": 0,
+    "unseeded_findings": 0
+  },
+  "clinic-dashboard": {
+    "pattern_seeds": 8,
+    "pattern_caught": 8,
+    "semantic_seeds": 1,
+    "semantic_caught": 0,
+    "clean_decoys": 4,
+    "false_alarms": 0,
+    "unseeded_findings": 0
+  },
+  "fintech-api": {
+    "pattern_seeds": 4,
+    "pattern_caught": 4,
+    "semantic_seeds": 1,
+    "semantic_caught": 0,
+    "clean_decoys": 2,
+    "false_alarms": 0,
+    "unseeded_findings": 0
+  },
+  "total": {
+    "pattern_seeds": 19,
+    "pattern_caught": 19,
+    "semantic_seeds": 4,
+    "semantic_caught": 0,
+    "clean_decoys": 9,
+    "false_alarms": 0,
+    "unseeded_findings": 0
+  }
+}

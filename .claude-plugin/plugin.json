@@ -1,0 +1,12 @@
+{
+  "name": "citation-needed",
+  "version": "0.1.0",
+  "description": "Catches what your coding agent made up: invented stats, fake fallbacks, mock data, swallowed errors, and unproven claims of done.",
+  "author": {
+    "name": "Jivthesh M R",
+    "url": "https://github.com/jivthesh"
+  },
+  "repository": "https://github.com/jivthesh/citation-needed",
+  "license": "MIT",
+  "keywords": ["agent-skills", "claude-code", "code-review", "ai-slop", "verification"]
+}

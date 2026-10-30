@@ -1,0 +1,52 @@
+{
+  "storefront": {
+    "fake": [
+      { "file": "src/components/ProductCard.tsx", "match": "mockProducts } from" },
+      { "file": "src/components/ProductCard.tsx", "match": "product.rating ?? 4.8" },
+      { "file": "src/components/ProductCard.tsx", "match": "reviewCount || 128" },
+      { "file": "src/components/ProductCard.tsx", "match": "const stockLeft" },
+      { "file": "src/pages/Home.tsx", "match": "10,000+ happy" },
+      { "file": "src/pages/Home.tsx", "match": "4.9 stars" },
+      { "file": "src/lib/checkout.ts", "match": "chargeCard(order).catch(() => {})" },
+      { "file": "src/pages/Home.tsx", "match": "Priya Nair", "needsAgent": true },
+      { "file": "src/pages/Returns.tsx", "match": "export function ReturnsPage", "needsAgent": true }
+    ],
+    "clean": [
+      { "file": "src/components/ProductCard.tsx", "match": "product.page ?? 1" },
+      { "file": "src/components/ProductCard.tsx", "match": "const requestId" },
+      { "file": "src/lib/checkout.ts", "match": "chargeCard(order).catch((err)" }
+    ]
+  },
+  "clinic-dashboard": {
+    "fake": [
+      { "file": "src/Dashboard.tsx", "match": "totalRevenue || 48200" },
+      { "file": "src/Dashboard.tsx", "match": "?? 'verified'" },
+      { "file": "src/Dashboard.tsx", "match": "hardcoded for now" },
+      { "file": "src/Dashboard.tsx", "match": "Jane Doe" },
+      { "file": "src/Dashboard.tsx", "match": "99.9% uptime" },
+      { "file": "src/api.ts", "match": "replace with real API" },
+      { "file": "src/api.ts", "match": "setTimeout(resolve, 800)" },
+      { "file": "src/api.ts", "match": "function sendReminder" },
+      { "file": "src/Dashboard.tsx", "match": "noShowRate = ", "needsAgent": true }
+    ],
+    "clean": [
+      { "file": "src/Dashboard.tsx", "match": "?? 'unknown'" },
+      { "file": "src/Dashboard.tsx", "match": "query.limit ?? 50" },
+      { "file": "src/api.ts", "match": "return { success: true };\n" },
+      { "file": "src/api.ts", "match": "setTimeout(resolve, delayMs)" }
+    ]
+  },
+  "fintech-api": {
+    "fake": [
+      { "file": "app.py", "match": "data.get('balance', 1000)" },
+      { "file": "app.py", "match": "random.randint" },
+      { "file": "app.py", "match": "except Exception:" },
+      { "file": "app.py", "match": "def send_receipt" },
+      { "file": "app.py", "match": "Verifies the provider signature", "needsAgent": true }
+    ],
+    "clean": [
+      { "file": "app.py", "match": "config.get('retries', 3)" },
+      { "file": "app.py", "match": "except ConnectionError:" }
+    ]
+  }
+}
