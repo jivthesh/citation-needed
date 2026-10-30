@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "citation-needed",
+  "name": "citation-needed-code",
   "description": "Catches what your coding agent made up.",
   "owner": {
     "name": "Jivthesh M R",
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "citation-needed",
+      "name": "citation-needed-code",
       "description": "Catches invented stats, fake fallbacks, mock data, swallowed errors, and unproven claims of done.",
       "source": "./",
       "category": "productivity"

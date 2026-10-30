@@ -1,6 +1,6 @@
 {
-  "name": "citation-needed",
-  "version": "0.1.1",
+  "name": "citation-needed-code",
+  "version": "0.1.2",
   "description": "Catches what your coding agent made up.",
   "license": "MIT",
   "repository": "github:jivthesh/citation-needed",

@@ -4,7 +4,7 @@
 
 Coding agents don't only write bugs. They fill gaps with things that look real: a 4.8 rating nobody gave, a `catch {}` that turns a failed payment into a success, a screen nothing links to. Tests pass and the demo looks great.
 
-`citation-needed` treats every value a user can see, and every claim of "done", as a Wikipedia edit: no source, no entry.
+`citation-needed` (plugin ID `citation-needed-code`) treats every value a user can see, and every claim of "done", as a Wikipedia edit: no source, no entry.
 
 ![An audit report marking a failed charge reported as paid, a made-up 4.8 star rating, hardcoded testimonials, and an unreachable page](assets/report.svg)
 
@@ -16,7 +16,7 @@ Always on in Claude Code (recommended):
 
 ```
 /plugin marketplace add jivthesh/citation-needed
-/plugin install citation-needed@citation-needed
+/plugin install citation-needed-code@citation-needed-code
 ```
 
 Any agent, on demand:
