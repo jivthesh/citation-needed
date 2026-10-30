@@ -117,6 +117,10 @@ npm run benchmark:agent -- --out /tmp/cn-demo
 npm run benchmark:prevent -- --out /tmp/cn-prevent
 ```
 
+## Privacy
+
+It collects no data and makes no network requests. See [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT
